@@ -118,7 +118,7 @@ module InsertReplace = struct
           | v::vs ->
               let ps = expr_placeholders ~placeholder i v in
               let n = i + List.length ps in
-              sprintf "(%s)\n%s" (String.concat ", " ps) (pss n vs) in
+              sprintf "(%s),\n%s" (String.concat ", " ps) (pss n vs) in
       pss 1 values
 
   let params_of_values
